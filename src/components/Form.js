@@ -11,7 +11,7 @@ function Form(props) {
     const submitForm = e => {
         e.preventDefault();
         props.teamMember(member)
-        setMember({ name: "", email: "", role: '' });
+        setMember({ name: '', email: '', role: '' });
     };
 
     return (
@@ -21,6 +21,7 @@ function Form(props) {
                 id='name'
                 type='text'
                 name='name'
+                value={member.name}
                 onChange={handleChanges}
             />
             <label htmlFor='email'>Email</label>
@@ -28,14 +29,15 @@ function Form(props) {
                 id='email'
                 type='text'
                 name='email'
+                value={member.email}
                 onChange={handleChanges}
             />
             <label htmlFor='role'>Role</label>
             <select
-                id='role' name='role' onChange={handleChanges}>
+                id='role' name='role' onChange={handleChanges} value={member.role}>
+                <option>Select One...</option>
                 <option>FrontEnd</option>
                 <option>Backend</option>
-                <option>Front End</option>
                 <option>Designer</option>
             </select>
             <button type='submit'>Submit</button>
