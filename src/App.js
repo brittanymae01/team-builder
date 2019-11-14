@@ -8,7 +8,7 @@ function App() {
     id: 1,
     name: 'Bob',
     email: 'bob.com',
-    role: 'front-end'
+    role: 'FrontEnd'
   }])
 
   const addTeamMember = member => {
