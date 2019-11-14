@@ -35,10 +35,10 @@ function Form(props) {
             <label htmlFor='role'>Role</label>
             <select
                 id='role' name='role' onChange={handleChanges} value={member.role}>
-                <option>Select One...</option>
-                <option>FrontEnd</option>
-                <option>Backend</option>
-                <option>Designer</option>
+                <option value='' disabled >Select One...</option>
+                <option value='frontend'>FrontEnd</option>
+                <option value='backend'>Backend</option>
+                <option value='designer'>Designer</option>
             </select>
             <button type='submit'>Submit</button>
 

@@ -4,7 +4,7 @@ function TeamMembers(props) {
     return (
         <div>
             {props.teamMember.map(mate => (
-                <div>
+                <div key={mate.id}>
                     <h2>{mate.name}</h2>
                     <p>{mate.email}</p>
                     <p>{mate.role}</p>
